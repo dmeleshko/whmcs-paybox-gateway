@@ -1,6 +1,6 @@
 {
     "name": "dmeleshko/whmcs-paybox-gateway",
-    "description": "Payment Gateway Module for the WHMCS Billing Automation Platform for Paybox.kz and Platron.ru payment systems",
+    "description": "Payment Gateway Module for the WHMCS Billing Automation Platform for Paybox.kz payment system",
     "type": "library",
     "license": "MIT",
     "authors": [

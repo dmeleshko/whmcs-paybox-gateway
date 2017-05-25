@@ -1,44 +1,9 @@
 <?php
-/**
- * WHMCS Sample Payment Gateway Module
- *
- * Payment Gateway modules allow you to integrate payment solutions with the
- * WHMCS platform.
- *
- * This sample file demonstrates how a payment gateway module for WHMCS should
- * be structured and all supported functionality it can contain.
- *
- * Within the module itself, all functions must be prefixed with the module
- * filename, followed by an underscore, and then the function name. For this
- * example file, the filename is "gatewaymodule" and therefore all functions
- * begin "gatewaymodule_".
- *
- * If your module or third party API does not support a given function, you
- * should not define that function within your module. Only the _config
- * function is required.
- *
- * For more information, please refer to the online documentation.
- *
- * @see http://docs.whmcs.com/Gateway_Module_Developer_Docs
- *
- * @copyright Copyright (c) WHMCS Limited 2015
- * @license http://www.whmcs.com/license/ WHMCS Eula
- */
 
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
 }
 
-/**
- * Define module related meta data.
- *
- * Values returned here are used to determine module related capabilities and
- * settings.
- *
- * @see http://docs.whmcs.com/Gateway_Module_Meta_Data_Parameters
- *
- * @return array
- */
 function payboxkz_MetaData()
 {
     return array(
@@ -47,26 +12,6 @@ function payboxkz_MetaData()
     );
 }
 
-/**
- * Define gateway configuration options.
- *
- * The fields you define here determine the configuration options that are
- * presented to administrator users when activating and configuring your
- * payment gateway module for use.
- *
- * Supported field types include:
- * * text
- * * password
- * * yesno
- * * dropdown
- * * radio
- * * textarea
- *
- * Examples of each field type and their possible configuration parameters are
- * provided in the sample function below.
- *
- * @return array
- */
 function payboxkz_config()
 {
     return array(
@@ -123,20 +68,6 @@ function payboxkz_config()
     );
 }
 
-/**
- * Payment link.
- *
- * Required by third party payment gateway modules only.
- *
- * Defines the HTML output displayed on an invoice. Typically consists of an
- * HTML form that will take the user to the payment gateway endpoint.
- *
- * @param array $params Payment Gateway Module Parameters
- *
- * @see http://docs.whmcs.com/Payment_Gateway_Module_Parameters
- *
- * @return string
- */
 function payboxkz_link($params)
 {
 
